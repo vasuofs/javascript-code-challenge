@@ -1,0 +1,54 @@
+<!doctype>
+<html lang="en">
+<head>
+<title>MY BOOK </title>
+<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/feed.css" />
+	<script src="js/feeds.js"></script>
+	<script src="js/profile.js"></script>
+	
+</head>
+<body>
+	<main>
+		<header> 
+			<div class="left-section">
+				<h1> My Book</h1>
+			</div>
+			<div class="right-section">
+				<button onclick="logout()">Sign Out</button>
+			</div>
+		</header>
+		<section>
+		<aside>
+		<div id="showFeed" class="active" onclick="setPage('showFeed')">Feeds</div>
+		<div id="showProfile" onclick="setPage('showProfile')">profile</div>		
+		</aside>
+		
+		<div class="container">
+		<section id="feed-section">
+			<div class="post-container"> <input type="text" id="postItem" width="300" /> <button onclick="insertFeed();">Post</button> </div>
+			<div id="feedContainer"></div>		
+		</section>
+		
+		<section id="profile-section">
+			<div id="profileContainer">
+				<form action="#">
+				<div id="profilepic"><img id="profileImg" width='100%' /> </div>
+				<input type="text" placeholder="Name" id="name" max="50" required /><br>
+				<input type="number" placeholder="Age" min="0" max="100" id="age" required /><br>
+				<input type="tel" placeholder="Phone" min="10" id="tel" required /><br>
+				<input type="email" placeholder="Email" id="email" required /><br>
+				<textarea placeholder="address" id="add"></textarea><br>
+				<input type="file" id="imgUrl" accept="image/*" onchange="setProfileImage(this)"  /><br>
+				<button onclick="saveProfile()">Save</button>
+				</form>
+			</div>
+		</section>
+		
+		</div>
+		
+		</section>
+		<footer>  <small>Copyrights <span>&copy;</span> My Book</small> </footer>
+	</main>
+</body>
+</html>
